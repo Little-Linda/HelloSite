@@ -1,0 +1,120 @@
+//@import url('https://fonts.googleapis.com/css?family=Shadows+Into+Light&display=swap');
+//@import url('https://fonts.googleapis.com/css?family=Geostar&display=swap');
+//@import url('https://fonts.googleapis.com/css?family=Orbitron&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Press+Start+2P&display=swap');
+body{
+    margin: 0;
+    //font-family: 'Shadows Into Light', cursive;
+    //font-family: 'Geostar', cursive;
+    //font-family: 'Orbitron', sans-serif;
+    font-family: 'Press Start 2P', cursive;
+    font-size: 16px;
+    //color: #ffe001;
+    color: #6985af;
+    background: #101936;
+}
+#root{
+    min-width: 310px;
+}
+h1 {
+    color: #ff177c;
+}
+.text-center{
+    text-align: center;
+}
+.main-wrapper{
+    padding: 45px;
+    width: 67%;
+    margin: 0 auto;
+    border: 6px dashed;
+}
+.wrapper{
+    padding: 10px;
+}
+.inline-block{
+    display: inline-block;
+    vertical-align: top;
+}
+.flex{
+    display: flex;
+}
+.marginTB100{
+    margin: 50px 0;
+}
+.description-wrapper{
+    font-size: 1rem;
+    margin: 60px 0;
+    line-height: 41px;
+    border-bottom: 1px solid;
+}
+.user-btn{
+    background: #ff177c;
+    border: 8px solid #ffe001;
+    font-size: 2.5em;
+    cursor: pointer;
+    color: #ffe001;
+    margin: 45px 0 0 0;
+    width: 351px;
+}
+.grid{
+    display: grid;
+    grid-auto-flow: dense;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    grid-auto-rows: 280px;
+    grid-gap: 90px;
+    padding: 40px 10px;
+    width: 73%;
+    margin: 0 auto;
+
+    .char-wrapper{
+        grid-area: span 2/span 2;
+        text-align: center;
+    }
+    img{
+        width: 78%;
+        height: 78%;
+        -o-object-fit: cover;
+        object-fit: cover;
+        border-radius: 3px;
+        justify-self: center;
+        cursor: pointer;
+    }
+    @media (max-width: 1550px) {
+        .char-wrapper{
+            grid-area: span 1/span 1;
+        }
+    }
+}
+.active{
+    //border: 6px dashed;
+    //margin: 50px auto;
+    background:-webkit-linear-gradient(left, #6985af 70%, transparent 70%),
+    -webkit-linear-gradient(left, #6985af 70%, transparent 70%),
+    -webkit-linear-gradient(top, #6985af 70%, transparent 70%),
+    -webkit-linear-gradient(top, #6985af 70%, transparent 70%);
+
+    background-size: 18px 5px, 18px 5px, 5px 18px, 5px 18px;
+    background-repeat: repeat-x, repeat-x, repeat-y, repeat-y;
+    background-position: 0 0, left bottom, 0 0, right 0;
+
+    animation:move 20s linear infinite;
+}
+
+.watchStyles{
+    color: #244a57;
+}
+
+@keyframes move{
+    0%{ background-position:0 0, left bottom, 0 0, right 0;}
+    100%{ background-position:1000px 0, -1000px bottom,  0 -1000px, right 1000px;}
+}
+
+
+@media (max-width: 1550px) {
+    h1{
+        font-size: 14px;
+    }
+    .grid {
+        grid-gap: 47px;
+    }
+}
