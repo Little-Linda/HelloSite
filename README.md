@@ -6,7 +6,7 @@ for start do
 >`npm run start`
 
 or add Configuration in IDEa
-
+`npm>`
 >`(//package.json)`
 `Command: start`
 
